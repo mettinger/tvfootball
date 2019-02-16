@@ -19,6 +19,12 @@ module.exports = {
     provider: () =>
       new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/f565925a6c5143188b5589a37b28139b"),
     network_id: '4',
-    }
+  },
+  thunder: {
+    provider: () => new HDWalletProvider(mnemonic, "https://testnet-rpc.thundercore.com:8544"),
+    network_id: "*",
+    gas: 3000000,
+    gasPrice: 50000000000
+  }
   }
 };
